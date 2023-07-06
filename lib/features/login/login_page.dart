@@ -1,13 +1,13 @@
+import 'package:eds_final/features/login/login_controller.dart';
 import 'package:eds_final/features/register/register_page.dart';
 import 'package:eds_final/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'login_controller.dart';
-
-class LoginPage extends GetView<LoginController> {
+class LoginPage extends GetView<AuthController> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final AuthController _authController = Get.find<AuthController>();
 
   @override
   Widget build(BuildContext context) {
@@ -61,9 +61,7 @@ class LoginPage extends GetView<LoginController> {
                     Text('Login with Google'),
                   ],
                 ),
-                onPressed: () {
-                  // Logic untuk login dengan Google
-                },
+                onPressed: _authController.signInWithGoogle,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.whitePutih1,
                   foregroundColor: AppColors.accentBlack,

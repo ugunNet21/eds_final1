@@ -1,14 +1,16 @@
 
-import 'package:eds_final/features/home_dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../home/home_dashboard.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
-class _RegisterPageState extends State<RegisterPage>{
-final TextEditingController emailController = TextEditingController();
+
+class _RegisterPageState extends State<RegisterPage> {
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   String? selectedGender;
   String? selectedClass;
@@ -101,7 +103,8 @@ final TextEditingController emailController = TextEditingController();
             ),
             SizedBox(height: 32),
             ElevatedButton(
-              onPressed: () {Get.to(HomeDashboard());
+              onPressed: () {
+                Get.to(HomeDashboard());
                 // if (Form.of(context).validate()) {
                 //   // Proses simpan data dan pindah ke halaman berikutnya
                 //   Get.toNamed(AppRoutes.dashboard);
@@ -117,7 +120,4 @@ final TextEditingController emailController = TextEditingController();
       ),
     );
   }
-
-
 }
-  

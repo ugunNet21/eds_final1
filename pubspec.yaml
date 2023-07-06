@@ -10,9 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.1.4
-  # firebase_core: ^1.7.0
-  google_sign_in: ^5.0.4
   firebase_auth: ^4.6.3
+  google_sign_in: ^6.1.4
+  firebase_core: ^2.14.0
   google_fonts: ^5.1.0
 
 dev_dependencies:

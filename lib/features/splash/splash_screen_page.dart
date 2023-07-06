@@ -2,7 +2,7 @@ import 'package:eds_final/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:async';
-import '../../core/constants/app_route.dart';
+import '../../routes/app_routes.dart';
 
 class SplashScreenPage extends StatelessWidget {
   @override

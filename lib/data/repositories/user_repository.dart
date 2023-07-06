@@ -7,7 +7,7 @@ class UserRepository {
 
   Future<UserModel?> getCurrentUser() async {
     // Implementasikan logika untuk mendapatkan data user dari sumber data (misalnya API atau database)
-    // Anda dapat menggunakan library seperti Dio atau http untuk mengambil data dari API
+    // menggunakan library seperti Dio atau http untuk mengambil data dari API
     // Misalnya, menggunakan Future.delayed untuk mensimulasikan pengambilan data
     await Future.delayed(Duration(seconds: 2));
 
@@ -17,7 +17,7 @@ class UserRepository {
 
   Future<void> loginUser(String email, String password) async {
     // Implementasikan logika untuk login user
-    // Anda dapat menggunakan AuthService atau layanan autentikasi lainnya
+    // menggunakan AuthService atau layanan autentikasi lainnya
     // Misalnya, menggunakan Future.delayed untuk mensimulasikan proses login
     await Future.delayed(Duration(seconds: 2));
 
