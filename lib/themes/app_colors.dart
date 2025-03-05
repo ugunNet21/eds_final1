@@ -15,7 +15,6 @@ class AppColors {
 
   static bool get primaryBlueBrightness {
     // Implementasi logika untuk menentukan kecerahan warna primaryBlue
-    // Misalnya, dapat menggunakan nilai R, G, B untuk mengecek kecerahan warna
     return (primaryBlue.red + primaryBlue.green + primaryBlue.blue) < 400;
   }
 }

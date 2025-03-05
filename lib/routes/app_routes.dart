@@ -1,5 +1,6 @@
 import 'package:eds_final/app_bindings.dart';
-import 'package:eds_final/features/home/home_dashboard.dart';
+import 'package:eds_final/features/discuss/disscusion_page.dart';
+import 'package:eds_final/features/home/home_tabs.dart';
 import 'package:eds_final/features/login/login_page.dart';
 import 'package:eds_final/features/register/register_page.dart';
 import 'package:eds_final/features/splash/splash_screen_page.dart';
@@ -9,8 +10,9 @@ class AppRoutes {
   static const String splash = '/';
   static const String login = '/login';
   static const String register = '/register';
-  static const String dashboard = '/dashboard';
-  static const String list_mapel = '/listmapel';
+  static const String hometab = '/hometab';
+  static const String listMapel = '/listmapel';
+  static const String disscusionPage = '/disscusion';
 
   static final List<GetPage> routes = [
     GetPage(
@@ -29,8 +31,13 @@ class AppRoutes {
       binding: AppBindings(),
     ),
     GetPage(
-      name: dashboard,
-      page: () => HomeDashboard(),
+      name: hometab,
+      page: () => HomeTab(),
+      binding: AppBindings(),
+    ),
+    GetPage(
+      name: disscusionPage,
+      page: () => const DisscusionPage(),
       binding: AppBindings(),
     ),
   ];

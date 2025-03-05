@@ -10,16 +10,14 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.splash,
       getPages: AppRoutes.routes,
     );
   }
 }
-
-
-
-
-// initialBinding: AppBindings(),

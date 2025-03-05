@@ -28,5 +28,5 @@ abstract class AppFonts {
     );
   }
 
-  // Metode atau properti lainnya
+  
 }

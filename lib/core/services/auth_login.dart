@@ -19,7 +19,7 @@ class FirebaseAuthService {
         idToken: googleAuth.idToken,
       );
 
-      // Melakukan sign in dengan credential ke Firebase
+      //  sign in dengan credential ke Firebase
       final UserCredential userCredential =
           await _firebaseAuth.signInWithCredential(credential);
 
@@ -35,41 +35,18 @@ class FirebaseAuthService {
   }
 }
 
+class AuthService {
+  bool isLoggedIn = false;
 
+  Future<void> login(String email, String password) async {
+    //  logika login di sini
+  }
 
+  Future<void> register(String email, String password) async {
+    //  logika registrasi di sini
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class AuthService {
-//   bool isLoggedIn = false;
-
-//   Future<void> login(String email, String password) async {
-//     // Implementasikan logika login di sini
-//   }
-
-//   Future<void> register(String email, String password) async {
-//     // Implementasikan logika registrasi di sini
-//   }
-
-//   void logout() {
-//     // Implementasikan logika logout di sini
-//   }
-// }
+  void logout() {
+    //  logika logout di sini
+  }
+}

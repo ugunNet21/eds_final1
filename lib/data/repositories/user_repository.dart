@@ -1,14 +1,12 @@
-
-
 import '../../core/models/user_model.dart';
 
 class UserRepository {
   UserModel? _currentUser;
 
   Future<UserModel?> getCurrentUser() async {
-    // Implementasikan logika untuk mendapatkan data user dari sumber data (misalnya API atau database)
-    // menggunakan library seperti Dio atau http untuk mengambil data dari API
-    // Misalnya, menggunakan Future.delayed untuk mensimulasikan pengambilan data
+    //  logika untuk mendapatkan data user dari sumber data (misalnya API atau database)
+    //  Dio atau http untuk mengambil data dari API
+    // Future.delayed untuk mensimulasikan pengambilan data
     await Future.delayed(Duration(seconds: 2));
 
     // Return UserModel atau null jika tidak ada user yang aktif
@@ -16,8 +14,8 @@ class UserRepository {
   }
 
   Future<void> loginUser(String email, String password) async {
-    // Implementasikan logika untuk login user
-    // menggunakan AuthService atau layanan autentikasi lainnya
+    //  logika untuk login user
+    //  AuthService atau layanan autentikasi lainnya
     // Misalnya, menggunakan Future.delayed untuk mensimulasikan proses login
     await Future.delayed(Duration(seconds: 2));
 

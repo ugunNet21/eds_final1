@@ -1,5 +1,5 @@
 import 'package:eds_final/features/login/login_controller.dart';
-import 'package:eds_final/features/register/register_page.dart';
+// import 'package:eds_final/features/register/register_page.dart';
 import 'package:eds_final/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -87,7 +87,7 @@ class LoginPage extends GetView<AuthController> {
                   ],
                 ),
                 onPressed: () {
-                  // Logic untuk login dengan Apple ID
+                  // login dengan Apple ID
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.accentBlackApple,
@@ -114,7 +114,8 @@ class LoginPage extends GetView<AuthController> {
                   ],
                 ),
                 onPressed: () {
-                  Get.to(RegisterPage());
+                  // Get.to(RegisterPage());
+                  Get.offAllNamed('/hometab');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primaryBluemuda,

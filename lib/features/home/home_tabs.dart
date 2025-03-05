@@ -1,13 +1,20 @@
+import 'package:eds_final/features/home/home_controller.dart';
+import 'package:eds_final/features/home/home_nav.dart';
 import 'package:eds_final/features/mapel/list_mapel.dart';
 import 'package:eds_final/themes/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class HomeDashboard extends StatefulWidget {
+class HomeTab extends StatefulWidget {
+  const HomeTab({super.key});
+
   @override
-  State<HomeDashboard> createState() => _HomeDashboardState();
+  State<HomeTab> createState() => _HomeTabState();
 }
 
-class _HomeDashboardState extends State<HomeDashboard> {
+class _HomeTabState extends State<HomeTab> {
+  final HomeController _homeController = Get.put(HomeController());
+
   List<String> pelajaran = [
     'Matematika',
     'Fisika',
@@ -251,52 +258,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: AppColors.whitePutih1,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/ic_home.png',
-              width: 24,
-              height: 24,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.primaryBluemuda,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset(
-                    'assets/images/ic_quiz.png',
-                    width: 24,
-                    height: 24,
-                  ),
-                ),
-              ),
-            ),
-            label: 'Diskusi Soal',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: AppColors.primaryBluemuda,
-            ),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: HomeNavigation(),
     );
   }
 }

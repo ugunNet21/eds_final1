@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../home/home_dashboard.dart';
+import '../home/home_tabs.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -104,7 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                Get.to(HomeDashboard());
+                Get.to(HomeTab());
                 // if (Form.of(context).validate()) {
                 //   // Proses simpan data dan pindah ke halaman berikutnya
                 //   Get.toNamed(AppRoutes.dashboard);
